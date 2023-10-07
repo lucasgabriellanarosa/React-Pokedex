@@ -1,0 +1,26 @@
+@font-face {
+    font-family: PokemonHollow;
+    src: local(Hollow), url(../../assets/PokemonHollow.ttf)
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(45deg, #8f5453, #a7647f);
+    padding: 1rem 3rem;
+    height: 15vh;
+}
+
+.leftContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logoTitle{
+    font-family: PokemonHollow;
+    font-size: 3rem;
+}
+

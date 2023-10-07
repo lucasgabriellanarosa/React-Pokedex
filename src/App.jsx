@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
-
+import axios from "axios";
+import { PokemonCard } from './components/PokemonCard/PokemonCard';
+import { Header } from './components/Header/Header';
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [pokemons, setPokemons] = useState([])
+
+  const getPokemonData = async () => {
+    let endpoints = [];
+    for (let i = 1; i < 151; i++) {
+      endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+    }
+    axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
+  }
+  
+  // useEffect(() => {
+  //   getPokemonData();
+  // }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='container'>
+      <Header />
+
+      <ul>
+        {
+          pokemons.map((pokemon) => <PokemonCard key={pokemon.data.id} pokemonData={pokemon.data}/> )
+        }
+      </ul>
+    </div>
+
+
   )
 }
 
