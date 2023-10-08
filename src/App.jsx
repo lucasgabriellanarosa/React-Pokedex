@@ -9,21 +9,22 @@ function App() {
 
   const getPokemonData = async () => {
     let endpoints = [];
-    for (let i = 1; i < 151; i++) {
+    for (let i = 1; i < 13; i++) {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     }
     axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
   }
   
-  // useEffect(() => {
-  //   getPokemonData();
-  // }, [])
+  useEffect(() => {
+    getPokemonData();
+  }, [])
 
   return (
-    <div className='container'>
+    <div className='appContainer'>
       <Header />
 
-      <ul>
+
+      <ul className='pokemonContainer'>
         {
           pokemons.map((pokemon) => <PokemonCard key={pokemon.data.id} pokemonData={pokemon.data}/> )
         }

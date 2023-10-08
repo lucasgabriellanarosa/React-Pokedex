@@ -1,0 +1,42 @@
+.pokemonCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    gap: .5rem;
+    background-color: #99807f7a;
+    box-shadow: 0 0 5px 5px #3f3534;
+}
+
+.pokemonImg{
+    width: 7.25vw;
+}
+.pokemonImg:hover{
+    scale: 1.2;
+}
+
+.pokemonId{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.pokemonName{
+    font-size: 1.1rem;
+    font-style: italic;
+    text-decoration: underline;
+    color: black;
+    font-weight: 500;
+}
+.pokemonName:visited{
+    color: black;
+}
+
+.elementContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

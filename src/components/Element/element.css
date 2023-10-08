@@ -1,0 +1,7 @@
+/* All images inside the elementContainer */
+.elementContainer img{
+    width: 40px;
+}
+.elementContainer img:hover{
+    scale: 1.1;
+}
