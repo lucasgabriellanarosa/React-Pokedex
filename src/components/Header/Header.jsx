@@ -9,7 +9,7 @@ export const Header = ({setQuery}) => {
 
       <div className='leftContainer'>
         <img src={Haunter} height={125} />
-        <h1 className='logoTitle'>Pokedex</h1>
+        <a href='#' className='logoTitle'>Pokedex</a>
       </div>
 
       <Navbar setQuery={setQuery} />
