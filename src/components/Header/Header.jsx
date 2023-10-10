@@ -3,7 +3,7 @@ import { Navbar } from '../Navbar/Navbar';
 import Haunter from '../../assets/haunter.png';
 import './header.css'
 
-export const Header = () => {
+export const Header = ({setQuery}) => {
   return (
     <header className='header'>
 
@@ -12,7 +12,7 @@ export const Header = () => {
         <h1 className='logoTitle'>Pokedex</h1>
       </div>
 
-      <Navbar/>
+      <Navbar setQuery={setQuery} />
       
     </header>
   )

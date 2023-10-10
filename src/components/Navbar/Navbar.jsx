@@ -1,12 +1,20 @@
 import React from 'react'
 import './navbar.css'
-import { HiSearch } from "react-icons/hi";
+import { useRef } from 'react'
 
-export const Navbar = () => {
+
+
+export const Navbar = ({setQuery}) => {
+  const inputQuery = useRef()
+
+  const updateQuery = () => {
+    setQuery(inputQuery.current.value)
+  }
+
   return (
-    <form action="" className='searchForm'>
-      <input type="text" className='searchInput' placeholder='Search a pokemon...'/>
-      <button className='searchBtn'><HiSearch /></button>
-    </form>
+    <input type="text" className='searchInput' placeholder='Search a pokemon...'
+    ref={inputQuery}
+    onChange={updateQuery}
+    />
   )
 }

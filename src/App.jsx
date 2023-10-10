@@ -13,6 +13,9 @@ import 'swiper/css/grid';
 function App() {
 
   const [pokemons, setPokemons] = useState([])
+  const [query, setQuery] = useState("")
+
+  
 
   const getPokemonData = async () => {
     let endpoints = [];
@@ -28,28 +31,30 @@ function App() {
 
   return (
     <div className='appContainer'>
-      <Header />
 
+      <Header setQuery={setQuery} />
 
-    <main className='swiperContainer'>
-      <Swiper      
-      className='pokemonContainer'
-      modules={[Navigation, Pagination, Grid]}
-      spaceBetween={25}
-      slidesPerView={4}
-      navigation
-      pagination={{ clickable: true }}
-      grid={{
-        fill: 'row',
-        rows: 3,
-      }}
-      >
-        {
-          pokemons.map((pokemon) => <SwiperSlide key={pokemon.data.id}><PokemonCard pokemonData={pokemon.data}/></SwiperSlide>)
+      <main className='swiperContainer'>
+        <Swiper      
+        className='pokemonContainer'
+        modules={[Navigation, Pagination, Grid]}
+        spaceBetween={25}
+        slidesPerView={4}
+        navigation
+        pagination={{ clickable: true }}
+        grid={{
+          fill: 'row',
+          rows: 3,
+        }}
+        >
+          {
+            pokemons.filter(pokemon => pokemon.data.name.toLowerCase().includes(query.toLowerCase())).map((filteredPokemon) => (
+              <SwiperSlide key={filteredPokemon.data.id}><PokemonCard pokemonData={filteredPokemon.data}/></SwiperSlide>
+            ))
+          }
+        </Swiper>
+      </main>
 
-        }
-      </Swiper>
-    </main>
     </div>
 
 
