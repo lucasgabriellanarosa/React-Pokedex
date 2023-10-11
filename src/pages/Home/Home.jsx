@@ -9,12 +9,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
+import { Loading } from '../../components/Loading/Loading';
 
 function Home() {
 
   const [pokemons, setPokemons] = useState([])
   const [query, setQuery] = useState("")
-
   
 
   const getPokemonData = async () => {
@@ -33,7 +33,7 @@ function Home() {
   return (
     <div className='appContainer'>
 
-      <Header setQuery={setQuery} />
+      <Header setQuery={setQuery} page="Home"/>
 
       <main className='swiperContainer'>
         <Swiper      

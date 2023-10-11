@@ -2,18 +2,19 @@ import React from 'react';
 import { Navbar } from '../Navbar/Navbar';
 import Haunter from '../../assets/haunter.png';
 import './header.css'
+import { Link } from 'react-router-dom';
 
-export const Header = ({setQuery}) => {
+export const Header = ({setQuery, page}) => {
   return (
     <header className='header'>
 
       <div className='leftContainer'>
         <img src={Haunter} height={125} />
-        <a href='#' className='logoTitle'>Pokedex</a>
+        <Link to="/" className='logoTitle'>Pokedex</Link>
       </div>
 
-      <Navbar setQuery={setQuery} />
-      
+      {page === "Home" && <Navbar setQuery={setQuery} />}
+  
     </header>
   )
 }

@@ -8,10 +8,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* background-image: linear-gradient(45deg, #8f5453, #a7647f); */
+    background-image: linear-gradient(45deg, #8f5453, #a7647f);
     background-image: linear-gradient(45deg, rgb(15, 15, 15), rgb(31, 30, 30));
-    padding: 1rem 3rem;
-    height: 15vh;
+    padding: 0 3rem;
+    min-height: 15vh;
 }
 
 .leftContainer{
@@ -24,5 +24,6 @@
     font-family: PokemonHollow;
     font-size: 3rem;
     color: #4e4655;
+    text-decoration: none; 
 }
 
