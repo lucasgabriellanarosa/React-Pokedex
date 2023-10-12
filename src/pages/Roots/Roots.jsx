@@ -8,7 +8,7 @@ export const Roots = () => {
     <BrowserRouter>
         <Routes>
             <Route exact path='/' element={ <Home /> } />
-            <Route path='/:pokemon' element={ <PokemonPage /> } />
+            <Route path='/pokemon/:pokemon' element={ <PokemonPage /> } />
         </Routes>
     </BrowserRouter>
   )

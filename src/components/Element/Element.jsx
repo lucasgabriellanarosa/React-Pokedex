@@ -19,51 +19,54 @@ import Rock from '../../assets/elements/rock.png';
 import Steel from '../../assets/elements/steel.png';
 import Water from '../../assets/elements/water.png';
 
-export const Element = ({ elementName }) => {
+export const Element = ({ elementName, elementSize }) => {
 
   const renderElement = () => {
     switch (elementName) {
       case 'bug':
-        return <img src={Bug} />
+        return <img className={elementSize} src={Bug} />
       case 'dark':
-        return <img src={Dark} />
+        return <img className={elementSize} src={Dark} />
       case 'dragon':
-        return <img src={Dragon} />
+        return <img className={elementSize} src={Dragon} />
       case 'electric':
-        return <img src={Electric} />
+        return <img className={elementSize} src={Electric} />
       case 'fairy':
-        return <img src={Fairy} />
+        return <img className={elementSize} src={Fairy} />
       case 'fighting':
-        return <img src={Fighting} />
+        return <img className={elementSize} src={Fighting} />
       case 'fire':
-        return <img src={Fire} />
+        return <img className={elementSize} src={Fire} />
       case 'flying':
-        return <img src={Flying} />
+        return <img className={elementSize} src={Flying} />
       case 'ghost':
-        return <img src={Ghost} />
+        return <img className={elementSize} src={Ghost} />
       case 'grass':
-        return <img src={Grass} />
+        return <img className={elementSize} src={Grass} />
       case 'ground':
-        return <img src={Ground} />
+        return <img className={elementSize} src={Ground} />
       case 'ice':
-        return <img src={Ice} />
+        return <img className={elementSize} src={Ice} />
       case 'normal':
-        return <img src={Normal} />
+        return <img className={elementSize} src={Normal} />
       case 'poison':
-        return <img src={Poison} />
+        return <img className={elementSize} src={Poison} />
       case 'psychic':
-        return <img src={Psychic} />
+        return <img className={elementSize} src={Psychic} />
       case 'rock':
-        return <img src={Rock} />
+        return <img className={elementSize} src={Rock} />
       case 'steel':
-        return <img src={Steel} />
+        return <img className={elementSize} src={Steel} />
       case 'water':
-        return <img src={Water} />
+        return <img className={elementSize} src={Water} />
     }
   }
+
+
+
   return (
-    <a href='#'>
+    <>
       {renderElement()}
-    </a>
+    </>
   )
 }

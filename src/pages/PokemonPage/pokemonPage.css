@@ -2,6 +2,26 @@
     display: flex;
     min-height: 85vh;
     width: 100%;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.pokemonNameTitle{
+    font-style: italic;
+    color: #4e4655;
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: .3rem 1rem;
+}
+
+.pokemonImg-PokePage{
+    width: 15vw;
+}
+.pokemonImg-PokePage:hover{
+    scale: 1.3;
+}
+
+.elementContainer-PokePage{
+    width: 80px !important;
 }
