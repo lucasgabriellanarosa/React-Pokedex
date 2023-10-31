@@ -7,7 +7,7 @@ I decided to do this project after coding my first To Do List with React, so it 
 * UseEffect
 * React Router Dom
 
-We can say that I used all that I learned with the React course from DevMedia, the platform I'm using to learn this library. I'm also using the Swiper library to make the carousel.
+We can say that I used all that I learned with the React course from DevMedia, the platform I'm using to learn this library. I'm also using the [Swiper](https://swiperjs.com/get-started) library to make the carousel.
 
 
 ## Pages
