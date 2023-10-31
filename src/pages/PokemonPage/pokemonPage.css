@@ -18,9 +18,6 @@
 .pokemonImg-PokePage{
     width: 15vw;
 }
-.pokemonImg-PokePage:hover{
-    scale: 1.3;
-}
 
 .elementContainer-PokePage{
     width: 80px !important;
